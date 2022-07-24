@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,64 +16,77 @@
     place-items: center;
     transition: opacity .25s, visibility 1s;
 }
-.loader{
+
+.loader {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
-.loader span{
+
+.loader span {
     width: 100px;
     height: 100px;
-    border-radius: 50%; 
+    border-radius: 50%;
     border: 5px solid transparent;
     border-left: 5px solid rgb(40, 128, 252);
     animation: loading 0.5s linear infinite;
 }
+
 @keyframes loading {
-    0%{
+    0% {
         transform: rotate(0);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
-.loader p{
+
+.loader p {
     position: absolute;
     animation: animate 2s linear infinite;
 }
+
 @keyframes animate {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
-.fade{
+
+.fade {
     opacity: 0;
     visibility: hidden;
 }
-body{
-    background: linear-gradient(#6164C3,#3E56EB);
+
+body {
+    background: linear-gradient(#6164C3, #3E56EB);
     /* background: linear-gradient(#A56662,#2E8B74); */
 }
-.container{
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
 }
-.container h1{
+
+.container h1 {
     font-size: 2.2em;
     color: #fff;
     text-align: center;
     text-shadow: 3px 3px 10px #333;
     user-select: none;
 }
-.container .div-1, .container .div-2{
+
+.container .div-1,
+.container .div-2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -83,7 +97,9 @@ body{
     padding: 10px 30px;
     box-shadow: 0 0 10px #c5c5c5;
 }
-.container .div-1 span, .container .div-2 span{
+
+.container .div-1 span,
+.container .div-2 span {
     width: auto;
     height: auto;
     padding: 10px 20px;
@@ -93,7 +109,8 @@ body{
     box-shadow: 0 0 10px #c5c5c5;
     margin: 10px 20px;
 }
-.container button{
+
+.container button {
     color: #090909;
     padding: 0.7em 1.7em;
     font-size: 16px;
@@ -103,31 +120,42 @@ body{
     border: none;
     border: 1px solid #e8e8e8;
     background: #e8e8e8;
-    box-shadow: 6px 6px 12px #c5c5c5, 
-                -6px -6px 12px #fff;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #fff;
     transition: all 0.3s;
 }
-.container button:active{
+
+.container button:active {
     transform: scale(0.9);
     transition: all 0.3s;
 }
-.container .div-1 p, .container .div-2 p{
+
+.container .div-1 p,
+.container .div-2 p {
     color: #ddd;
 }
-.container .div-1 p a, .container .div-2 p a{
+
+.container .div-1 p a,
+.container .div-2 p a {
     color: #ddd;
 }
+
 @media (max-width: 370px) {
-    .container .div-1, .container .div-2{
+
+    .container .div-1,
+    .container .div-2 {
         margin: 10px;
         height: 97vh;
         padding: 10px 60px;
     }
-    .container .div-2{
+
+    .container .div-2 {
         padding: 0;
         margin: 10px 5px;
     }
-    .container .div-1 span, .container .div-2 span{
+
+    .container .div-1 span,
+    .container .div-2 span {
         width: 90%;
     }
 }
