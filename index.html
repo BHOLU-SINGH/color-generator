@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator | Free Projects1</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="In this project, we can generate simple color and gradient color also by press 'Get New Color' button.">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="div-1" id="get-simple-color">
+            <h1>Generate Simple Color</h1>
+            <span id="c_code">#FFFFFF</span>
+            <button onclick="simpleColor()">Get New Color</button>
+            <p>Get Gradient Color <a href="#get-gradient-color" id="gradient-color">Here</a></p>
+        </div>
+        <div class="div-2" id="get-gradient-color" style="display: none;">
+            <h1>Generate Gradient Color</h1>
+            <span id="c_code2">linear-gradient(#6164C3,#3E56EB)</span>
+            <button onclick="gradientColor()">Get New Color</button>
+            <p>Get Simple Color <a href="#get-simple-color" id="simple-color">Here</a></p>
+        </div>
+    </div>
+
+    <script>
+        function generateColor(){
+            var symbols, color;
+            symbols = "0123456789ABCDEF";
+
+            color = "#";
+            for(var i = 0; i < 6; i++){
+                color = color + symbols[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        function simpleColor(){
+            var color = generateColor();
+            document.body.style.background = color;
+            document.getElementById('c_code').innerHTML = color;
+        }
+        function gradientColor(){
+            var color = generateColor();
+            var color2 = generateColor();
+             document.body.style.background = "linear-gradient("+color+","+color2+")";
+            document.getElementById('c_code2').innerHTML = "linear-gradient("+color+","+color2+")";
+        }
+    </script>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#gradient-color").click(function(){
+                $(".div-2").show();
+                $(".div-1").hide();
+            });
+            $("#simple-color").click(function(){
+                $(".div-1").show();
+                $(".div-2").hide();
+            });
+        })
+    </script>
+</body>
+</html>
