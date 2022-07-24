@@ -1,13 +1,13 @@
 # color-generator
 In this project, we can generate simple colors and gradient colors by pressing the 'Get New Color' button.
 
-<p>Get Simple Color</p>
+<h1>Get Simple Color</h1>
 <p>By default Simple Color page is open</p>
 <p>Get simple color code just click on 'Get New Color' button</p>
 <img src="https://github.com/BHOLU-SINGH/color-generator/blob/master/output-img-1.png" />
 
 
-<p>Get Gradient Color</p>
+<h1>Get Gradient Color</h1>
 <p>If you want to get gradient color code, first click on 'Here' link(in bottom center) and gradient color page is open.</p>
 <p>and now, we can change gradient color by pressing 'Get New Color' button.</p>
 <img src="https://github.com/BHOLU-SINGH/color-generator/blob/master/output-img-2.png" />
