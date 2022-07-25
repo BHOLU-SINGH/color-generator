@@ -140,7 +140,7 @@ body {
     color: #ddd;
 }
 
-@media (max-width: 385px) {
+@media (max-width: 415px) {
 
     .container .div-1,
     .container .div-2 {
